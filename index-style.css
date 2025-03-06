@@ -19,7 +19,43 @@ body {
   padding: 0 20px;
   box-sizing: border-box;
 }
+/* model choice */
+.web-name {
+  margin-left: 20px;
+  display: inline-block;
+  position: sticky;
+  cursor: pointer;
+}
 
+.choice-label {
+  color: white;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.choice-mode {
+  margin-top: 25px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.choice-mode a {
+  color: black;
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+}
+.choice-mode a:hover {
+  background-color: #a8a8a8;
+}
+.web-name:hover .choice-mode {
+  display: block;
+}
+
+/* profile icon */
 .profile-container {
   margin-right: 20px;
   position: absolute;
@@ -32,8 +68,10 @@ body {
   height: 50px;
   cursor: pointer;
 }
+
+/* home icon */
 .home-container {
-  margin-left: 100px;
+  margin-left: 140px;
   position: absolute;
   top: 10px;
 }
