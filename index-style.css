@@ -32,6 +32,11 @@ body {
   height: 50px;
   cursor: pointer;
 }
+.home-container {
+  margin-left: 100px;
+  position: absolute;
+  top: 10px;
+}
 
 .home-icon {
   width: 50px;
