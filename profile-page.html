@@ -26,15 +26,11 @@
 
     <h1>Profile Page</h1>
 
-    <form action="">
-      <!-- Preview circle -->
-      <label for="photo" class="photo-preview"></label>
-
-      <!-- Container for the file input + Upload button -->
-      <div class="photo-choose">
-        <input type="file" name="photo" id="photo" accept="image/*" />
-        <button type="submit">Upload</button>
-      </div>
+    <!-- photo edit -->
+    <form action="" method="post" enctype="multipart/form-data">
+      <label class="photo-container" for="photo">
+        <div class="photo-preview"></div>
+      </label>
     </form>
   </body>
 </html>
