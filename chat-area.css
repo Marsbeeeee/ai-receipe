@@ -1,3 +1,31 @@
+.dialog-box {
+  position: fixed;
+  top: 88%;
+  left: 30%;
+  width: 600px;
+  background-color: #fff;
+  border: none;
+  box-sizing: border-box;
+}
+
+.dialog-input {
+  height: 50px;
+  width: 500px;
+  display: flex;
+  outline: none;
+  border: black 2px solid;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.dialog-button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
 .ai-text {
   margin: 10px;
   font-size: 16px;
