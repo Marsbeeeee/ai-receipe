@@ -1,69 +1,17 @@
-.chat-bubble-left {
-  position: relative;
-  height: auto;
-  max-width: 30em;
-  background-color: #fff;
-  color: #000;
-  padding: 1.125em 1.05em;
-  font-size: 1.25em;
-  border-radius: 1rem;
-  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3),
-    0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
-
-  margin: 0 0 1em 0;
-  margin-right: auto;
-
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.chat-bubble-left::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  bottom: 100%;
-  left: 1.5em;
-  border: 0.75rem solid transparent;
-  border-top: none;
-  border-bottom-color: #fff;
-  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+.ai-text {
+  margin: 10px;
+  font-size: 16px;
+  color: #333;
 }
 
 .chat-bubble-right {
-  position: relative;
-  height: auto;
-  max-width: 30em;
-  background-color: #dcf8c6;
-  color: #000;
-  padding: 1.125em 1.05em;
-  font-size: 1.25em;
-  border-radius: 1rem;
-  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3),
-    0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
-
-  margin: 0 0 1em auto;
-  margin-left: auto;
-
-  white-space: pre-wrap;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 70%;
+  align-self: flex-end;
   word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.chat-bubble-right::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  bottom: 100%;
-  right: 1.5em;
-  border: 0.75rem solid transparent;
-  border-top: none;
-  border-bottom-color: #dcf8c6;
-  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
-
-  transform: rotateY(180deg);
 }
 
 .chat-container {
@@ -73,4 +21,5 @@
   flex-direction: column;
   padding: 0 5px;
   box-sizing: border-box;
+  overflow-y: auto;
 }

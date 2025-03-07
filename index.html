@@ -35,9 +35,6 @@
       </div>
     </div>
 
-    <h1>Welcome to the Index Page</h1>
-    <p>This is the homepage content.</p>
-
     <!-- chat container -->
     <div class="chat-container" id="chat-container">
       <!-- chat bubble -->
@@ -53,71 +50,7 @@
       />
       <button class="dialog-button" id="dialog-button">Send</button>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-      const chatContainer = document.getElementById("chat-container");
-      const dialogInput = document.getElementById("dialog-input");
-      const dialogButton = document.getElementById("dialog-button");
-
-      // right bubble (my message)
-      function createRightBubble(text) {
-        const bubble = document.createElement("div");
-        bubble.classList.add("chat-bubble-right");
-        bubble.textContent = text;
-        chatContainer.appendChild(bubble);
-      }
-
-      // left bubble (ai message)
-      function createLeftBubble(text) {
-        const bubble = document.createElement("div");
-        bubble.classList.add("chat-bubble-left");
-        bubble.textContent = text;
-        chatContainer.appendChild(bubble);
-      }
-
-      // send to backend
-      async function sendToAI(userMessage) {
-        try {
-          // hos, port
-          const response = await fetch("/api/ai-chat", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ userMessage }),
-          });
-
-          if (!response.ok) {
-            throw new Error(`Server error: ${response.status}`);
-          }
-
-          const data = await response.json();
-          // return message
-          return data.aiReply;
-        } catch (err) {
-          console.error(err);
-          return "AI服务暂时不可用...";
-        }
-      }
-
-      // click send
-      dialogButton.addEventListener("click", async () => {
-        const message = dialogInput.value.trim();
-        if (!message) return;
-
-        // 1. create right bubble
-        createRightBubble(message);
-
-        // 2. clear container
-        dialogInput.value = "";
-
-        // 3. send to backend and wait message
-        const aiReply = await sendToAI(message);
-
-        // 4. create left bubble
-        createLeftBubble(aiReply);
-      });
-    </script>
+    <!-- import Javascript -->
+    <script src="ai-chat-backend.js"></script>
   </body>
 </html>
